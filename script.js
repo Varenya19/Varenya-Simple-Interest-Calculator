@@ -13,7 +13,9 @@ function compute() {
 
     if (principal <= 0) {
         alert('Sorry, we only accept positive numbers. Can you please enter a positive number for the value of Amount.');
+        document.getElementById('principal').focus();
         return;
+
     }
 
     if (isNaN(rate)) {
@@ -30,7 +32,7 @@ function compute() {
         return;
     }
 
-    const recieveAmount = principal * rate/100 * years;
+    const recieveAmount = principal * rate / 100 * years;
     const recieveYear = new Date().getFullYear() + years;
 
     document.getElementById('deposit').innerText = principal;
