@@ -1,1 +1,1 @@
-# coding-project-template
+# Varenya's Simple Interest Calculator
