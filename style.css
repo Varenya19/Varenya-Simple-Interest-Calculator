@@ -1,4 +1,92 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color: white;
+}
 
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color: grey;
+}
 
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* For Mobile */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75 {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.text {
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formLabel {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.formInput {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.interestForm {
+    margin: auto;
+    /* width:50%; */
+    padding: 10px;
+}
+
+.text-hilight {
+    background-color: yellow;
+}
+
+.none {
+    display: none;
+}
+
+.show {
+    display: block
+}
+
+.slider {
+    width: 45%
+}
+
+#sliderValue {
+    font-size: 12px;
+    margin-top: 16px;
+    position: fixed;
+}
+
+.trademark {
+    font-size: 16px; 
+    color: rgb(0, 0, 0);
+}

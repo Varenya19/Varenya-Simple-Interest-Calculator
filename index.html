@@ -1,16 +1,64 @@
 <html>
-    <head>
+
+<head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+</head>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<body>
+    <h1>Simple Interest Calculator</h1>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+
+
+    <div class="interestForm text">
+        <div class="row">
+            <div class="col-25">
+                <label class="formLabel">Amount</label>
+            </div>
+            <div class="col-75">
+                <input autofocus class="formInput" type="number" id="principal">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label class="formLabel">Interest Rate</label>
+            </div>
+            <div class="col-75">
+                <input class="formInput slider" value="0" type="range" min='0.5' max="100" step="0.5" id="rate"
+                    onchange="onSliderChange(event)">
+                <span id="sliderValue"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label class="formLabel">No. of Years</label>
+            </div>
+            <div class="col-75">
+                <select class="formInput" id="years">
+                    <option value="1">1 </option>
+                    <option value="2">2 </option>
+                    <option value="3">3 </option>
+                    <option value="4">4 </option>
+                    <option value="5">5 </option>
+                    <option value="6">6 </option>
+                    <option value="7">7 </option>
+                    <option value="8">8 </option>
+                    <option value="9">9</option>
+                    <option value="10">10 </option>
+
+                </select>
+            </div>
+        </div>
+        <button onclick="compute()">Compute Interest</button>
+    </div>
+    <div id="messageDiv" class='none'>
+        If you deposit <span id="deposit" class='text-hilight'>1000000</span>,<br>
+        at an interest rate of <span id="interest" class='text-hilight'>3.5</span>%.<br>
+        You will receive an amount of <span id="recieveAmount" class='text-hilight'>175000</span><br>
+        in the year <span id="receiveYear" class='text-hilight'>2025</span><br>
+    </div>
+    <p class="trademark"> © Everyone Can Get Rich</p>
+</body>
+
 </html>
