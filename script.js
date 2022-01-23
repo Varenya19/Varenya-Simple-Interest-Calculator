@@ -11,17 +11,26 @@ function compute() {
         return;
     }
 
+    if (principal <= 0) {
+        alert('Sorry, we only accept positive numbers. Can you please enter a positive number for the value of Amount.');
+        return;
+    }
+
     if (isNaN(rate)) {
         alert('Sorry, we only accept numbers. Can you please enter a number for the value of Interest rate.');
         return;
 
+    }
+    if (rate <= 0) {
+        alert('Sorry, we only accept positive numbers. Can you please enter a positive number for the value of Interest rate.');
+        return;
     }
     if (isNaN(years)) {
         alert('Sorry, we only accept numbers. Can you please enter a number for the value of No. of Years.');
         return;
     }
 
-    const recieveAmount = principal * rate * years;
+    const recieveAmount = principal * rate/100 * years;
     const recieveYear = new Date().getFullYear() + years;
 
     document.getElementById('deposit').innerText = principal;
